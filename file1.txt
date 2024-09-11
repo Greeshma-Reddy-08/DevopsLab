@@ -1,0 +1,16 @@
+pipeline {
+agent any
+stages {
+stage('Git Checkout') {
+steps {
+echo ('Cloning repository')
+}
+}
+stage('Build') {
+steps {
+echo 'Building project'
+sh 'gradle clean build'
+}
+}
+}
+}
